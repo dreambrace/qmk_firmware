@@ -85,23 +85,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_NAV] = LAYOUT_split_3x6_3(
-    TO(_BASE),   TD(TD_BOOT), XXXXXXX,     XXXXXXX,     XXXXXXX,     TO(_GAME),                KC_HOME,     KC_PGDN,     KC_PGUP,     KC_END,      KC_INS,      TO(_BASE),
+    TO(_BASE),   TD(TD_BOOT), XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,                  KC_HOME,     KC_PGDN,     KC_PGUP,     KC_END,      KC_INS,      TO(_BASE),
     XXXXXXX,     XXXXXXX,     KC_LCTL,     KC_LALT,     KC_LSFT,     XXXXXXX,                  KC_LEFT,     KC_DOWN,     KC_UP,       KC_RGHT,     CW_TOGG,     XXXXXXX,
-    XXXXXXX,     KC_LGUI,     XXXXXXX,     TG(_FUN),    TG(_NUM),    TG(_SYM),                 C(KC_Y),     C(KC_V),     C(KC_C),     C(KC_X),     C(KC_Z),     _______,
+    XXXXXXX,     KC_LGUI,     XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,                  C(KC_Y),     C(KC_V),     C(KC_C),     C(KC_X),     C(KC_Z),     _______,
                                            XXXXXXX,     _______,     XXXXXXX,                  KC_BSPC,     KC_SPC,      KC_DEL
   ),
 
   [_SYM] = LAYOUT_split_3x6_3(
-    TO(_BASE),   KC_TILD,     KC_EXLM,     KC_AT,       KC_HASH,     KC_PIPE,                  LS_GAME,     XXXXXXX,     XXXXXXX,     XXXXXXX,     TD(TD_BOOT), TO(_BASE),
+    TO(_BASE),   KC_TILD,     KC_EXLM,     KC_AT,       KC_HASH,     KC_PIPE,                  XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,     TD(TD_BOOT), TO(_BASE),
     XXXXXXX,     KC_LCBR,     KC_DLR,      KC_PERC,     KC_CIRC,     KC_RCBR,                  XXXXXXX,     KC_RSFT,     KC_RALT,     KC_RCTL,     XXXXXXX,     XXXXXXX,
-    XXXXXXX,     KC_LPRN,     KC_AMPR,     KC_ASTR,     KC_LPRN,     KC_RPRN,                  TO(_NAV),    TO(_MOUSE),  XXXXXXX,     KC_RGUI,     XXXXXXX,     XXXXXXX,
+    XXXXXXX,     KC_LPRN,     KC_AMPR,     KC_ASTR,     KC_LPRN,     KC_RPRN,                  XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,     KC_RGUI,     XXXXXXX,
                                            KC_UNDS,     KC_RPRN,     KC_EQL,                   _______,     XXXXXXX,     XXXXXXX
-  ),
+ ),
 
   [_NUM] = LAYOUT_split_3x6_3(
-    TO(_BASE),   KC_GRV,      KC_1,        KC_2,        KC_3,        KC_BSLS,                  TO(_GAME),   XXXXXXX,     XXXXXXX,     XXXXXXX,     TD(TD_BOOT), TO(_BASE),
+    TO(_BASE),   KC_GRV,      KC_1,        KC_2,        KC_3,        KC_BSLS,                  XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,     TD(TD_BOOT), TO(_BASE),
     _______,     KC_LBRC,     KC_4,        KC_5,        KC_6,        KC_RBRC,                  XXXXXXX,     KC_RSFT,     KC_RALT,     KC_RCTL,     XXXXXXX,     XXXXXXX,
-    _______,     KC_BSPC,     KC_7,        KC_8,        KC_9,        KC_SPC,                   TO(_NAV),    TO(_MOUSE),  XXXXXXX,     XXXXXXX,     KC_RGUI,     XXXXXXX,
+    _______,     KC_BSPC,     KC_7,        KC_8,        KC_9,        KC_SPC,                   XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,     KC_RGUI,     XXXXXXX,
                                            KC_MINS,     KC_0,        KC_PLUS,                  XXXXXXX,     _______,     XXXXXXX
   ),
 
