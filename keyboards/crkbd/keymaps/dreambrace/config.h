@@ -43,3 +43,8 @@
 
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
 #define OLED_BRIGHTNESS 150
+
+// Fixes the issue of having to disconnect and reconnect after a system boot
+// However, it seems to break the slave side if flashed onto it
+#define SPLIT_USB_TIMEOUT 10000
+#define SPLIT_USB_TIMEOUT_POLL 10
