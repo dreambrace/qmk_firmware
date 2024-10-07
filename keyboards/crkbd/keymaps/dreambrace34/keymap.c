@@ -71,11 +71,11 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 }
 
 // Combos
-const uint16_t PROGMEM base_tab[] = {KC_E, KC_R, COMBO_END};
-const uint16_t PROGMEM base_del[] = {KC_U, KC_I, COMBO_END};
+const uint16_t PROGMEM base_tab[] = {KC_C, KC_V, COMBO_END};
+const uint16_t PROGMEM base_del[] = {KC_M, KC_COMMA, COMBO_END};
 const uint16_t PROGMEM base_minus[] = {KC_I, KC_O, COMBO_END};
-const uint16_t PROGMEM num_tab[] = {KC_2, KC_3, COMBO_END};
-const uint16_t PROGMEM nav_del[] = {LCTL(KC_TAB),RCS(KC_TAB), COMBO_END};
+const uint16_t PROGMEM num_tab[] = {KC_8, KC_9, COMBO_END};
+const uint16_t PROGMEM nav_del[] = {KC_PGDN,KC_PGUP, COMBO_END};
 const uint16_t PROGMEM nav_minus[] = {RCS(KC_TAB), KC_HYPR, COMBO_END};
 
 combo_t key_combos[] = {
