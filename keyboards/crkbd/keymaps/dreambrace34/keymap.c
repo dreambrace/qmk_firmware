@@ -13,59 +13,19 @@ enum layer_names {
     _MEDIA
 };
 
-// sm_td stuff
-
-enum custom_keycodes {
-    SMTD_KEYCODES_BEGIN = SAFE_RANGE,
-    CKC_Z, // reads as C(ustom) + KC_A, but you may give any name here
-    CKC_X,
-    CKC_D,
-    CKC_F,
-    CKC_J,
-    CKC_K,
-    CKC_DOT,
-    CKC_SLSH,
-    SMTD_KEYCODES_END,
-};
-
-// include after enum def, otherwise it won't work.
-#include "sm_td.h"
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    if (!process_smtd(keycode, record)) {
-        return false;
-    }
-
-    return true;
-    // your code here
-}
-
-void on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap_count) {
-    switch (keycode) {
-        SMTD_MT(CKC_Z, KC_Z, KC_LGUI)
-        SMTD_MT(CKC_X, KC_X, KC_LCTL)
-        SMTD_MT(CKC_D, KC_D, KC_LALT)
-        SMTD_MT(CKC_F, KC_F, KC_LSFT)
-        SMTD_MT(CKC_J, KC_J, KC_LSFT)
-        SMTD_MT(CKC_K, KC_K, KC_LALT)
-        SMTD_MT(CKC_DOT, KC_DOT, KC_LCTL)
-        SMTD_MT(CKC_SLSH, KC_SLSH, KC_LGUI)
-    }
-}
-
 // Aliases to keep the keymap clean
 
 // Home-row Modifiers Left
-#define HRM_Z CKC_Z
-#define HRM_X CKC_X
-#define HRM_D CKC_D
-#define HRM_F CKC_F
+#define HRM_Z MT(MOD_LGUI, KC_Z)
+#define HRM_X MT(MOD_LCTL, KC_X)
+#define HRM_D MT(MOD_LALT, KC_D)
+#define HRM_F MT(MOD_LSFT, KC_F)
 
 // Home-row Modifiers Right
-#define HRM_J CKC_J
-#define HRM_K CKC_K
-#define HRM_DOT CKC_DOT
-#define HRM_SLSH CKC_SLSH
+#define HRM_J MT(MOD_RSFT, KC_J)
+#define HRM_K MT(MOD_RALT, KC_K)
+#define HRM_DOT MT(MOD_RCTL, KC_DOT)
+#define HRM_SLSH MT(MOD_RGUI, KC_SLSH)
 
 // Layer switching
 #define LS_NAV LT(_NAV, KC_ESC)
