@@ -69,15 +69,19 @@ enum layer_names {
 // Window Manager
 #define A_GRV A(KC_GRV)
 #define A_TAB A(KC_TAB)
-#define AS_TAB RSA(KC_TAB)
+#define AS_TAB LSA(KC_TAB)
 #define A_TAB A(KC_TAB)
-#define AS_Q RSA(KC_Q)
+#define AS_Q LSA(KC_Q)
 #define A_LEFT A(KC_LEFT)
 #define A_DOWN A(KC_DOWN)
 #define A_UP A(KC_UP)
 #define A_RIGHT A(KC_RIGHT)
 #define A_BSPC A(KC_BSPC)
 #define A_SPC A(KC_SPC)
+#define AS_Y LSA(KC_Y)
+#define AS_U LSA(KC_U)
+#define AS_I LSA(KC_I)
+#define AS_O LSA(KC_O)
 
 // --- Custom shortcuts/macros ---
 #define C_UNDO LCTL(KC_Z)
@@ -303,7 +307,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_WM] = LAYOUT_split_3x6_3(
-    TD_BOOT,  XXXXXXX,  A(KC_4),  A(KC_5),  A(KC_6),  A_GRV,                 XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+    TD_BOOT,  XXXXXXX,  A(KC_4),  A(KC_5),  A(KC_6),  A_GRV,                 AS_Y,    AS_U,     AS_I,     AS_O,     XXXXXXX,  XXXXXXX,
     _______,  XXXXXXX,  A(KC_1),  A(KC_2),  A(KC_3),  AS_Q,                  A_LEFT,  A_DOWN,   A_UP,     A_RIGHT,  XXXXXXX,  XXXXXXX,
     XXXXXXX,  XXXXXXX,  XXXXXXX,  A_TAB,    AS_TAB,   A(KC_0),               XXXXXXX, S_HRM_4,  S_HRM_3,  S_HRM_2,  S_HRM_1,  XXXXXXX,
                                   XXXXXXX,  A(KC_F),  KC_LSFT,               A_BSPC,  A_SPC,    XXXXXXX
