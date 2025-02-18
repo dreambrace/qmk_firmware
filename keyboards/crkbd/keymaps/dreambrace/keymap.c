@@ -144,7 +144,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         case KC_EXCL_W:
             if (record->event.pressed) {
-                if (timer_elapsed(colon_timer) < 300) {
+                if (timer_elapsed(colon_timer) < 200) {
                     tap_code(KC_W);
                 } else {
                     // tap_code16() for "!" to avoid some overflow error
@@ -155,7 +155,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         case KC_TILD_Q:
             if (record->event.pressed) {
-                if (timer_elapsed(colon_timer) < 300) {
+                if (timer_elapsed(colon_timer) < 200) {
                     tap_code(KC_Q);
                 } else {
                     // tap_code16() for "~" to avoid some overflow error
