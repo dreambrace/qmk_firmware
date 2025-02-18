@@ -124,6 +124,8 @@ const uint32_t PROGMEM unicode_map[] = {
 
 // --- Custom key declaration ---
 enum custom_keycodes {
+// These two are used to prevent typos that occur when accidentally chording
+// keys instead of switching back to the base layer in common vim commands
     // Key that sends "w" instead of "!" if ":" was recently pressed
     KC_EXCL_W = SAFE_RANGE,
     // Key that sends "q" instead of "~" if ":" was recently pressed
