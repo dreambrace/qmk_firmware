@@ -117,6 +117,46 @@ const uint32_t PROGMEM unicode_map[] = {
     [Ž_LO] = 0x17E  // ž
 };
 
+// =================================
+// $          Custom keys          =
+// =================================
+
+// Key that sends "w" instead of "!" if ":" was recently pressed
+
+// --- Custom key declaration ---
+enum custom_keycodes {
+    KC_EXCL_W = SAFE_RANGE,
+};
+
+// Timer to track colon key press
+static uint16_t colon_timer = 0;
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        // Track when the colon key is pressed
+        case KC_COLON:
+            if (record->event.pressed) {
+                colon_timer = timer_read();
+            }
+            return true;
+
+        // Custom key functionality
+        case KC_EXCL_W:
+            if (record->event.pressed) {
+                if (timer_elapsed(colon_timer) < 300) {
+                    tap_code(KC_W);
+                } else {
+                    // tap_code16() for "!" to avoid some overflow error
+                    tap_code16(S(KC_1));
+                }
+            }
+            return false;
+
+        default:
+            return true;
+    }
+}
+
 // ===============================
 // $          Tap Dance          =
 // ===============================
@@ -242,7 +282,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_SYM] = LAYOUT_split_3x6_3(
-    XXXXXXX,  KC_TILD,  KC_W,     KC_AT,    KC_HASH,  KC_ASTR,               KC_AMPR,  KC_LCBR,  KC_RCBR,  KC_MINS,  KC_GRV,   XXXXXXX,
+    XXXXXXX,  KC_TILD,  KC_EXCL_W,KC_AT,    KC_HASH,  KC_ASTR,               KC_AMPR,  KC_LCBR,  KC_RCBR,  KC_MINS,  KC_GRV,   XXXXXXX,
     XXXXXXX,  KC_CIRC,  KC_UNDS,  KC_EQL,   KC_DLR,   KC_PERC,               KC_PIPE,  KC_LPRN,  KC_RPRN,  KC_SCLN,  KC_COLN,  XXXXXXX,
     XXXXXXX,  KC_LABK,  KC_MINS,  KC_PLUS,  KC_RABK,  XXXXXXX,               KC_EXLM,  KC_LBRC,  KC_RBRC,  XXXXXXX,  KC_BSLS,  XXXXXXX,
                                   XXXXXXX,  KC_SPC,   XXXXXXX,               _______,  XXXXXXX,  XXXXXXX
