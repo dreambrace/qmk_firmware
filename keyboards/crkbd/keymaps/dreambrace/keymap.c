@@ -292,9 +292,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_WM] = LAYOUT_split_3x6_3(
-    TD_BOOT,  XXXXXXX,  A(KC_4),  A(KC_5),  A(KC_6),  A_GRV,                 AS_Y,    AS_U,     AS_I,     AS_O,     XXXXXXX,  XXXXXXX,
+    TD_BOOT,  XXXXXXX,  XXXXXXX,  A_TAB,    AS_TAB,   A_GRV,                 AS_Y,    AS_U,     AS_I,     AS_O,     XXXXXXX,  XXXXXXX,
     _______,  XXXXXXX,  A(KC_1),  A(KC_2),  A(KC_3),  AS_Q,                  A_LEFT,  A_DOWN,   A_UP,     A_RIGHT,  XXXXXXX,  XXXXXXX,
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  A_TAB,    AS_TAB,   A(KC_0),               XXXXXXX, S_HRM_4,  S_HRM_3,  S_HRM_2,  S_HRM_1,  XXXXXXX,
+    XXXXXXX,  XXXXXXX,  A(KC_4),  A(KC_5),  A(KC_6),  A(KC_0),               XXXXXXX, S_HRM_4,  S_HRM_3,  S_HRM_2,  S_HRM_1,  XXXXXXX,
                                   XXXXXXX,  A(KC_F),  KC_LSFT,               A_BSPC,  A_SPC,    XXXXXXX
   ),
 
