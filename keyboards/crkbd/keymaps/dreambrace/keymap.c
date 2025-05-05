@@ -227,43 +227,28 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 // to disable this, remove "#define COMBO_ONLY_FROM_LAYER 0" from config.h
 
 // --- Combo declaration ---
-const uint16_t PROGMEM T_G[] = {KC_T, KC_G, COMBO_END};
-const uint16_t PROGMEM F_P[] = {KC_F, KC_P, COMBO_END};
-const uint16_t PROGMEM M_N[] = {KC_M, KC_N, COMBO_END};
-const uint16_t PROGMEM L_U[] = {KC_L, KC_U, COMBO_END};
+const uint16_t PROGMEM D_W[] = {KC_D, KC_W, COMBO_END};
+const uint16_t PROGMEM S_G[] = {KC_S, KC_G, COMBO_END};
 
-const uint16_t PROGMEM P_B[] = {KC_P, KC_B, COMBO_END};
-const uint16_t PROGMEM J_L[] = {KC_J, KC_L, COMBO_END};
+const uint16_t PROGMEM W_V[] = {KC_P, KC_B, COMBO_END};
+const uint16_t PROGMEM QUOT_F[] = {KC_QUOT, KC_F, COMBO_END};
 
-const uint16_t PROGMEM Q_W_F_P[] = {KC_Q, KC_W, KC_F, KC_P, COMBO_END};
-const uint16_t PROGMEM L_U_Y_QUOTE[] = {KC_L, KC_U, KC_Y, KC_QUOT, COMBO_END};
-
-const uint16_t PROGMEM S_T_G[] = {KC_S, KC_T, KC_G, COMBO_END};
-const uint16_t PROGMEM K_H_COMMA[] = {KC_K, KC_H, KC_COMM, COMBO_END};
-const uint16_t PROGMEM M_N_E[] = {KC_M, KC_N, KC_E, COMBO_END};
+const uint16_t PROGMEM Z_L_D_W[] = {KC_Z, KC_L, KC_D, KC_W, COMBO_END};
+const uint16_t PROGMEM F_O_U_J[] = {KC_F, KC_O, KC_U, KC_J, COMBO_END};
 
 // --- Combo assignment ---
 combo_t key_combos[] = {
 // Individual key Combos
-    COMBO(T_G, KC_TAB),
-    COMBO(F_P, KC_DEL),
-    COMBO(M_N, KC_DEL),
-    COMBO(L_U, KC_TAB),
+    COMBO(D_W, KC_DEL),
+    COMBO(S_G, KC_SPC),
 
 // Reset to the base layer
-    COMBO(P_B, TO(_BASE)),
-    COMBO(J_L, TO(_BASE)),
+    COMBO(W_V, TO(_BASE)),
+    COMBO(QUOT_F, TO(_BASE)),
 
-// Layer locks
-// Used to lock the individual hold-layers instead of having a general
-// layer-lock key. This way they're always accesible one-handed.
-// To return to base layer, either use the base layer reset combo or assign
-// dedicated keys on each layer.
-    COMBO(Q_W_F_P, TO(_GAME)),
-    COMBO(L_U_Y_QUOTE, TO(_QWERTY)),
-    COMBO(S_T_G, TO(_NUM)),
-    COMBO(M_N_E, TO(_NAV)),
-    COMBO(K_H_COMMA, TO(_MOUSE)),
+// Alt layers
+    COMBO(Z_L_D_W, TO(_GAME)),
+    COMBO(F_O_U_J, TO(_QWERTY)),
 };
 
 // ============================
@@ -272,25 +257,18 @@ combo_t key_combos[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_split_3x6_3(
-    XXXXXXX,  KC_Q,     KC_W,     KC_F,     KC_P,     KC_B,                  KC_J,     KC_L,     KC_U,     KC_Y,     KC_QUOT,  XXXXXXX,
-    LS_WM,    KC_A,     KC_R,     KC_S,     KC_T,     KC_G,                  KC_M,     KC_N,     KC_E,     KC_I,     KC_O,     LS_MEDIA,
-    XXXXXXX,  KC_Z,     KC_X,     KC_C,     KC_D,     KC_V,                  KC_K,     KC_H,     KC_COMM,  KC_DOT,   KC_SLSH,  XXXXXXX,
+    XXXXXXX,  KC_Z,     KC_L,     KC_D,     KC_W,     KC_V,                  KC_QUOT,  KC_F,     KC_O,     KC_U,     KC_J,     XXXXXXX,
+    LS_WM,    KC_N,     KC_R,     KC_T,     KC_S,     KC_G,                  KC_Y,     KC_H,     KC_A,     KC_E,     KC_I,     LS_MEDIA,
+    MO(_NUM), KC_Q,     KC_X,     KC_M,     KC_C,     KC_B,                  KC_K,     KC_P,     KC_COMM,  KC_DOT,   KC_SLSH,  XXXXXXX,
                                   LS_MOUSE, LS_NAV,   LS_SHIFT,              LS_SYM,   LS_NUM,   LS_FUNC
   ),
 
   [_QWERTY] = LAYOUT_split_3x6_3(
-    XXXXXXX,  KC_Z,     KC_L,     KC_D,     KC_W,     KC_V,                  KC_J,     KC_F,     KC_O,     KC_U,     KC_SLSH,  XXXXXXX,
-    LS_WM,    KC_N,     KC_R,     KC_T,     KC_S,     KC_G,                  KC_Y,     KC_H,     KC_A,     KC_E,     KC_I,     LS_MEDIA,
-    XXXXXXX,  KC_Q,     KC_X,     KC_M,     KC_C,     KC_B,                  KC_K,     KC_P,     KC_QUOT,  KC_COMM,  KC_DOT,   XXXXXXX,
+    XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                  KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     XXXXXXX,
+    LS_WM,    KC_A,     KC_S,     KC_D,     KC_F,     KC_G,                  KC_H,     KC_J,     KC_K,     KC_L,     KC_QUOT,  LS_MEDIA,
+    XXXXXXX,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,                  KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  XXXXXXX,
                                   LS_MOUSE, LS_NAV,   LS_SHIFT,              LS_SYM,   LS_NUM,   LS_FUNC
   ),
-
-  // [_QWERTY] = LAYOUT_split_3x6_3(
-  //   XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                  KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     XXXXXXX,
-  //   LS_WM,    KC_A,     KC_S,     KC_D,     KC_F,     KC_G,                  KC_H,     KC_J,     KC_K,     KC_L,     KC_QUOT,  LS_MEDIA,
-  //   XXXXXXX,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,                  KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  XXXXXXX,
-  //                                 LS_MOUSE, LS_NAV,   LS_SHIFT,              LS_SYM,   LS_NUM,   LS_FUNC
-  // ),
 
   [_NAV] = LAYOUT_split_3x6_3(
     XXXXXXX,  KC_1,     KC_2,     KC_3,     KC_4,     KC_5,                  KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     XXXXXXX,
@@ -346,9 +324,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Unicode macros
   [_MEDIA] = LAYOUT_split_3x6_3(
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,               U_LNX,    KC_VOLD,  KC_MUTE,  KC_VOLU,  XXXXXXX,  TD_BOOT,
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  U_Š,      XXXXXXX,  XXXXXXX,               U_WIN,    KC_MPRV,  KC_MPLY,  KC_MNXT,  XXXXXXX,  _______,
-    XXXXXXX,  U_Ž,      U_Ć,      U_Č,      U_Đ,      XXXXXXX,               U_MAC,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+    XXXXXXX,  U_Ž,      XXXXXXX,  U_Đ,      XXXXXXX,  XXXXXXX,               U_LNX,    KC_VOLD,  KC_MUTE,  KC_VOLU,  XXXXXXX,  TD_BOOT,
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  U_Š,      XXXXXXX,               U_WIN,    KC_MPRV,  KC_MPLY,  KC_MNXT,  XXXXXXX,  _______,
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  U_Č,      U_Ć,                   U_MAC,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
                                   XXXXXXX,  XXXXXXX,  KC_LSFT,               KC_BSPC,  KC_SPC,   XXXXXXX
   ),
 
