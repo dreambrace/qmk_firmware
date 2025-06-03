@@ -230,7 +230,7 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 const uint16_t PROGMEM D_W[] = {KC_D, KC_W, COMBO_END};
 const uint16_t PROGMEM S_G[] = {KC_S, KC_G, COMBO_END};
 
-const uint16_t PROGMEM W_V[] = {KC_P, KC_B, COMBO_END};
+const uint16_t PROGMEM W_V[] = {KC_W, KC_V, COMBO_END};
 const uint16_t PROGMEM QUOT_F[] = {KC_QUOT, KC_F, COMBO_END};
 
 const uint16_t PROGMEM Z_L_D_W[] = {KC_Z, KC_L, KC_D, KC_W, COMBO_END};
