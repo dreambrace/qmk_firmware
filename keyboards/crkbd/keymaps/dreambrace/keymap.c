@@ -257,9 +257,9 @@ combo_t key_combos[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_split_3x6_3(
-    XXXXXXX,  KC_Z,     KC_L,     KC_D,     KC_W,     KC_V,                  KC_J,     KC_F,     KC_O,     KC_U,     KC_QUOT,  XXXXXXX,
+    XXXXXXX,  KC_Z,     KC_L,     KC_D,     KC_W,     KC_B,                  KC_J,     KC_F,     KC_O,     KC_U,     KC_QUOT,  XXXXXXX,
     LS_WM,    KC_N,     KC_R,     KC_T,     KC_S,     KC_G,                  KC_Y,     KC_H,     KC_A,     KC_E,     KC_I,     LS_MEDIA,
-    MO(_NUM), KC_Q,     KC_X,     KC_M,     KC_C,     KC_B,                  KC_K,     KC_P,     KC_COMM,  KC_DOT,   KC_SLSH,  MO(_NAV),
+    MO(_NUM), KC_Q,     KC_X,     KC_M,     KC_C,     KC_V,                  KC_K,     KC_P,     KC_COMM,  KC_DOT,   KC_SLSH,  MO(_NAV),
                                   LS_MOUSE, LS_NAV,   LS_SHIFT,              LS_SYM,   LS_NUM,   LS_FUNC
   ),
 
