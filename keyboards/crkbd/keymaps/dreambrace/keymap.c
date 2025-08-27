@@ -229,11 +229,11 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 const uint16_t PROGMEM D_W[] = {KC_D, KC_W, COMBO_END};
 const uint16_t PROGMEM S_G[] = {KC_S, KC_G, COMBO_END};
 
-const uint16_t PROGMEM W_V[] = {KC_W, KC_V, COMBO_END};
-const uint16_t PROGMEM QUOT_F[] = {KC_QUOT, KC_F, COMBO_END};
+const uint16_t PROGMEM W_B[] = {KC_W, KC_B, COMBO_END};
+const uint16_t PROGMEM J_F[] = {KC_J, KC_F, COMBO_END};
 
 const uint16_t PROGMEM Z_L_D_W[] = {KC_Z, KC_L, KC_D, KC_W, COMBO_END};
-const uint16_t PROGMEM F_O_U_J[] = {KC_F, KC_O, KC_U, KC_J, COMBO_END};
+const uint16_t PROGMEM F_O_U_QUOT[] = {KC_F, KC_O, KC_U, KC_QUOT, COMBO_END};
 
 // --- Combo assignment ---
 combo_t key_combos[] = {
@@ -242,12 +242,12 @@ combo_t key_combos[] = {
     COMBO(S_G, KC_SPC),
 
 // Reset to the base layer
-    COMBO(W_V, TO(_BASE)),
-    COMBO(QUOT_F, TO(_BASE)),
+    COMBO(W_B, TO(_BASE)),
+    COMBO(J_F, TO(_BASE)),
 
 // Alt layers
     COMBO(Z_L_D_W, TO(_GAME)),
-    COMBO(F_O_U_J, TO(_QWERTY)),
+    COMBO(F_O_U_QUOT, TO(_QWERTY)),
 };
 
 // ============================
