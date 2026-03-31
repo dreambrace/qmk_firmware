@@ -256,22 +256,22 @@ combo_t key_combos[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_split_3x6_3(
-    XXXXXXX,  KC_Z,     KC_L,     KC_D,     KC_W,     KC_B,                  KC_J,     KC_F,     KC_O,     KC_U,     KC_QUOT,  XXXXXXX,
-    MO(_NUM), KC_N,     KC_R,     KC_T,     KC_S,     KC_G,                  KC_Y,     KC_H,     KC_A,     KC_E,     KC_I,     MO(_NAV),
-    LS_MOUSE, KC_Q,     KC_X,     KC_M,     KC_C,     KC_V,                  KC_K,     KC_P,     KC_COMM,  KC_DOT,   KC_SLSH,  XXXXXXX,
+    XXXXXXX,  KC_Q,     KC_L,     KC_D,     KC_W,     KC_B,                  KC_J,     KC_F,     KC_O,     KC_U,     KC_QUOT,  XXXXXXX,
+    KC_LCTL,  KC_N,     KC_R,     KC_T,     KC_S,     KC_G,                  KC_Y,     KC_H,     KC_A,     KC_E,     KC_I,     MO(_NAV),
+    LS_MOUSE, KC_Z,     KC_X,     KC_M,     KC_C,     KC_V,                  KC_K,     KC_P,     KC_COMM,  KC_DOT,   KC_SLSH,  XXXXXXX,
                                   LS_WM,    LS_NAV,   LS_SHIFT,              LS_SYM,   LS_FUNC,  LS_MEDIA
   ),
 
   [_QWERTY] = LAYOUT_split_3x6_3(
     XXXXXXX,  KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                  KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     XXXXXXX,
-    MO(_NUM), KC_A,     KC_S,     KC_D,     KC_F,     KC_G,                  KC_H,     KC_J,     KC_K,     KC_L,     KC_QUOT,  MO(_NAV),
+    KC_LCTL,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,                  KC_H,     KC_J,     KC_K,     KC_L,     KC_QUOT,  MO(_NAV),
     LS_MOUSE, KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,                  KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  XXXXXXX,
                                   LS_WM,    LS_NAV,   LS_SHIFT,              LS_SYM,   LS_FUNC,  LS_MEDIA
   ),
 
   [_WM] = LAYOUT_split_3x6_3(
-    TD_BOOT,  XXXXXXX,  A(KC_4),  A(KC_5),  A(KC_6),  A(KC_0),               AS_Y,    AS_U,     AS_I,     AS_O,     XXXXXXX,  XXXXXXX,
-    XXXXXXX,  KC_LSFT,  A(KC_1),  A(KC_2),  A(KC_3),  A(KC_F),               A_LEFT,  A_DOWN,   A_UP,     A_RIGHT,  XXXXXXX,  XXXXXXX,
+    TD_BOOT,  A(KC_1),  A(KC_2),  A(KC_3),  A(KC_4),  A(KC_5),               AS_Y,    AS_U,     AS_I,     AS_O,     XXXXXXX,  XXXXXXX,
+    XXXXXXX,  A(KC_0),  XXXXXXX,  XXXXXXX,  S_HRM_4,  A(KC_F),               A_LEFT,  A_DOWN,   A_UP,     A_RIGHT,  XXXXXXX,  XXXXXXX,
     XXXXXXX,  XXXXXXX,  XXXXXXX,  AS_Q,     A_GRV,    XXXXXXX,               XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
                                   _______,  XXXXXXX,  XXXXXXX,               A_BSPC,  A_SPC,    XXXXXXX
   ),
@@ -293,7 +293,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_FUNC] = LAYOUT_split_3x6_3(
     XXXXXXX,  KC_F12,   KC_F7,    KC_F8,    KC_F9,    KC_PSCR,               XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
     XXXXXXX,  KC_F11,   KC_F4,    KC_F5,    KC_F6,    XXXXXXX,               XXXXXXX,  S_HRM_4,  S_HRM_3,  S_HRM_2,  S_HRM_1,  XXXXXXX,
-    XXXXXXX,  KC_F10,   KC_F1,    KC_F2,    KC_F3,    KC_APP,                XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+    XXXXXXX,  KC_F10,   KC_F1,    KC_F2,    KC_F3,    KC_SCRL,               XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
                                   XXXXXXX,  KC_ESC,   KC_ENT,                XXXXXXX,  _______,  XXXXXXX
   ),
 
@@ -309,9 +309,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Unicode macros
   [_MEDIA] = LAYOUT_split_3x6_3(
-    XXXXXXX,  U_Ž,      XXXXXXX,  U_Đ,      XXXXXXX,  XXXXXXX,               U_LNX,    KC_VOLD,  KC_MUTE,  KC_VOLU,  XXXXXXX,  TD_BOOT,
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  U_Đ,      XXXXXXX,  XXXXXXX,               U_LNX,    KC_VOLD,  KC_MUTE,  KC_VOLU,  XXXXXXX,  TD_BOOT,
     XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  U_Š,      XXXXXXX,               U_WIN,    KC_MPRV,  KC_MPLY,  KC_MNXT,  XXXXXXX,  XXXXXXX,
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  U_Č,      U_Ć,                   U_MAC,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+    XXXXXXX,  U_Ž,      XXXXXXX,  XXXXXXX,  U_Č,      U_Ć,                   U_MAC,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
                                   XXXXXXX,  XXXXXXX,  KC_LSFT,               XXXXXXX,  XXXXXXX,   _______
   ),
 
