@@ -256,9 +256,9 @@ combo_t key_combos[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_split_3x6_3(
-    XXXXXXX,  KC_Q,     KC_L,     KC_D,     KC_W,     KC_B,                  KC_J,     KC_F,     KC_O,     KC_U,     KC_QUOT,  XXXXXXX,
+    XXXXXXX,  KC_Z,     KC_L,     KC_D,     KC_W,     KC_B,                  KC_J,     KC_F,     KC_O,     KC_U,     KC_QUOT,  XXXXXXX,
     KC_LCTL,  KC_N,     KC_R,     KC_T,     KC_S,     KC_G,                  KC_Y,     KC_H,     KC_A,     KC_E,     KC_I,     MO(_NAV),
-    LS_MOUSE, KC_Z,     KC_X,     KC_M,     KC_C,     KC_V,                  KC_K,     KC_P,     KC_COMM,  KC_DOT,   KC_SLSH,  XXXXXXX,
+    LS_MOUSE, KC_Q,     KC_X,     KC_M,     KC_C,     KC_V,                  KC_K,     KC_P,     KC_COMM,  KC_DOT,   KC_SLSH,  XXXXXXX,
                                   LS_WM,    LS_NAV,   LS_SHIFT,              LS_SYM,   LS_FUNC,  LS_MEDIA
   ),
 
@@ -271,8 +271,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_WM] = LAYOUT_split_3x6_3(
     TD_BOOT,  A(KC_1),  A(KC_2),  A(KC_3),  A(KC_4),  A(KC_5),               AS_Y,    AS_U,     AS_I,     AS_O,     XXXXXXX,  XXXXXXX,
-    XXXXXXX,  A(KC_0),  XXXXXXX,  XXXXXXX,  S_HRM_4,  A(KC_F),               A_LEFT,  A_DOWN,   A_UP,     A_RIGHT,  XXXXXXX,  XXXXXXX,
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  AS_Q,     A_GRV,    XXXXXXX,               XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+    XXXXXXX,  S_HRM_4,  XXXXXXX,  XXXXXXX,  S_HRM_4,  A(KC_F),               A_LEFT,  A_DOWN,   A_UP,     A_RIGHT,  XXXXXXX,  XXXXXXX,
+    XXXXXXX,  A(KC_0),  XXXXXXX,  AS_Q,     A_GRV,    XXXXXXX,               XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
                                   _______,  XXXXXXX,  XXXXXXX,               A_BSPC,  A_SPC,    XXXXXXX
   ),
 
@@ -309,9 +309,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Unicode macros
   [_MEDIA] = LAYOUT_split_3x6_3(
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  U_Đ,      XXXXXXX,  XXXXXXX,               U_LNX,    KC_VOLD,  KC_MUTE,  KC_VOLU,  XXXXXXX,  TD_BOOT,
+    XXXXXXX,  U_Ž,      XXXXXXX,  U_Đ,      XXXXXXX,  XXXXXXX,               U_LNX,    KC_VOLD,  KC_MUTE,  KC_VOLU,  XXXXXXX,  TD_BOOT,
     XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  U_Š,      XXXXXXX,               U_WIN,    KC_MPRV,  KC_MPLY,  KC_MNXT,  XXXXXXX,  XXXXXXX,
-    XXXXXXX,  U_Ž,      XXXXXXX,  XXXXXXX,  U_Č,      U_Ć,                   U_MAC,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  U_Č,      U_Ć,                   U_MAC,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
                                   XXXXXXX,  XXXXXXX,  KC_LSFT,               XXXXXXX,  XXXXXXX,   _______
   ),
 
